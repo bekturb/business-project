@@ -1,10 +1,10 @@
 mixin image(name, className)
     img(class=className)(src=require(`../../img/${name}.svg`) alt='').
 
-mixin list(link, name, blank)
-    li.header__nav__list__items
-        a(href=link target=blank).header__nav__list__items__navlink=name
 
+mixin list(link, name, blank,classN)
+    li.header__nav__list__items
+        a(href=link target=blank class={ active: classN === current}).header__nav__list__items__navlink=name
 
 mixin order(orderName,link, name)
     li(class=orderName)

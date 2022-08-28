@@ -108,6 +108,7 @@
         }
 
         &__problem {
+          padding-top: 12px;
           margin-top: 24px;
           width: 292px;
           height: 191px;
@@ -117,7 +118,6 @@
           border-radius: 8px;
           @include input-font;
           &::placeholder{
-            padding-top: 12px;
             @include placeholder
           }
         }

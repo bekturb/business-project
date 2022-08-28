@@ -1,10 +1,22 @@
-extends ../layouts/index
+include  ../utils/_mixins
 
-block variables
-    - var title = 'Webpack + Pug';
-    - var description = 'Description for Webpack + Pug';
-block content
-    section
-        h1 it is blog page
-        h1 it is blog page
+
+- var current = "blog";
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(name="description", content=description)
+        title #{title}
+        block head
+
+    body
+        include ../includes/modules/_header
+        section
+            h1 it is blog page
+            h1 it is blog page
         include ../libs/_regsitration
+        include ../includes/modules/_footer
+    block script

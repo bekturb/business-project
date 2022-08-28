@@ -1,31 +1,41 @@
-extends ../layouts/index
 include  ../utils/_mixins
 
-block variables
-    - var title = 'Webpack + Pug';
-    - var description = 'Description for Webpack + Pug';
-block content
-    section#services
-        .container
-            .services
-                ul.services__list
-                    +order("services__list__order",'/','Главная')
-                    span.services__list__span /
-                    +order("services__list__order",'/','Услуги')
-                    span.services__list__span /
-                    +order("services__list__order",'services.html','Разрабатываем маркетинг-план: дорожная карта достижения целей')
-                .services__info
-                    h1.services__info__title Разрабатываем маркетинг-план: дорожная карта достижения целей
-                    ul.services__info__list
-                        +wihtoutlink("servicelogo","services__info__list__item","Делаем прогноз развития рынка")
-                        +wihtoutlink("servicelogo","services__info__list__item","Проводим сравнительный анализ стратегий конкурентов")
-                        +wihtoutlink("servicelogo","services__info__list__item","Определяем точки роста")
-                        +wihtoutlink("servicelogo","services__info__list__item","Ставим объективные цели")
-                        +wihtoutlink("servicelogo","services__info__list__item","Разрабатываем план и модель контроля его выполнения")
+- var current = "service";
 
-                .services__description
-                    h3.services__description__title Описание услуги
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(name="description", content=description)
+        title #{title}
+        block head
 
-    include ../libs/serviseHelpers/_service-description
-    include ../libs/serviseHelpers/_validation
-    include ../libs/_regsitration
+    body
+        include ../includes/modules/_header
+        section#services
+            .container
+                .services
+                    ul.services__list
+                        +order("services__list__order",'/','Главная')
+                        span.services__list__span /
+                        +order("services__list__order",'/','Услуги')
+                        span.services__list__span /
+                        +order("services__list__order",'services.html','Разрабатываем маркетинг-план: дорожная карта достижения целей')
+                    .services__info
+                        h1.services__info__title Разрабатываем маркетинг-план: дорожная карта достижения целей
+                        ul.services__info__list
+                            +wihtoutlink("servicelogo","services__info__list__item","Делаем прогноз развития рынка")
+                            +wihtoutlink("servicelogo","services__info__list__item","Проводим сравнительный анализ стратегий конкурентов")
+                            +wihtoutlink("servicelogo","services__info__list__item","Определяем точки роста")
+                            +wihtoutlink("servicelogo","services__info__list__item","Ставим объективные цели")
+                            +wihtoutlink("servicelogo","services__info__list__item","Разрабатываем план и модель контроля его выполнения")
+
+                    .services__description
+                        h3.services__description__title Описание услуги
+
+        include ../libs/serviseHelpers/_service-description
+        include ../libs/serviseHelpers/_validation
+        include ../libs/_regsitration
+        include ../includes/modules/_footer
+    block script

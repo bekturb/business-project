@@ -1,4 +1,18 @@
 
+
+@mixin link{
+  font-family: $font-stack;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: $title-color;
+}
+
 #header {
   padding: 20px 0;
   background: #FFFFFF;
@@ -59,17 +73,7 @@
           margin-right: 84px;
 
           &__navlink {
-            font-family: $font-stack;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 14px;
-            line-height: 17px;
-            text-align: center;
-            letter-spacing: 0.03em;
-            text-transform: uppercase;
-
-            color: $title-color;
-
+            @include link;
           }
 
           & .active {

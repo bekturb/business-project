@@ -1,33 +1,43 @@
-extends ../layouts/index
 include  ../utils/_mixins
 
-block variables
-    - var title = 'Webpack + Pug';
-    - var description = 'Description for Webpack + Pug';
-block content
-    section#detail
-        .container
-            .detail
-                ul.detail__list
-                    +order("detail__list__order",'/','Главная')
-                    span.detail__list__span /
-                    +order("detail__list__order",'/','Услуги')
-                    span.detail__list__span /
-                    +order("detail__list__order",'detail.html','Бизнес-тренинг «Маркетинг – технология роста»')
-                .detail__info
-                    h1.detail__info__title Бизнес-тренинг «Маркетинг – технология роста»
-                    .detail__info__subtitles
-                        p.detail__info__subtitles__subtitle Для кого: руководители компаний, маркетологи, продавцы
-                        p.detail__info__subtitles__subtitle Цели бизнес-тренинга:
-                .detail__definition
-                    ul.detail__definition__list
-                        +wihtoutlink("servicelogo","detail__definition__list__item","Определение маркетинга как технологии роста")
-                        +wihtoutlink("servicelogo","detail__definition__list__item","Организация маркетинга как сквозного бизнес-процесса")
-                        +wihtoutlink("servicelogo","detail__definition__list__item","Получение практических навыков применения технологии маркетинга")
-                a(href="detail.html").detail__btn Подробнее
-                    span.detail__btn__span
-                        +image("arrow2","detail__btn__span__img")
-    include ../libs/detailHelpers/_detail-helper
-    include ../libs/detailHelpers/detail-finish
-    include ../libs/serviseHelpers/_validation
-    include ../libs/_regsitration
+- var current = "training";
+
+doctype html
+html(lang='en')
+    head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+        meta(name="description", content=description)
+        title #{title}
+        block head
+
+    body
+        include ../includes/modules/_header
+        section#detail
+            .container
+                .detail
+                    ul.detail__list
+                        +order("detail__list__order",'/','Главная')
+                        span.detail__list__span /
+                        +order("detail__list__order",'/','Услуги')
+                        span.detail__list__span /
+                        +order("detail__list__order",'detail.html','Бизнес-тренинг «Маркетинг – технология роста»')
+                    .detail__info
+                        h1.detail__info__title Бизнес-тренинг «Маркетинг – технология роста»
+                        .detail__info__subtitles
+                            p.detail__info__subtitles__subtitle Для кого: руководители компаний, маркетологи, продавцы
+                            p.detail__info__subtitles__subtitle Цели бизнес-тренинга:
+                    .detail__definition
+                        ul.detail__definition__list
+                            +wihtoutlink("servicelogo","detail__definition__list__item","Определение маркетинга как технологии роста")
+                            +wihtoutlink("servicelogo","detail__definition__list__item","Организация маркетинга как сквозного бизнес-процесса")
+                            +wihtoutlink("servicelogo","detail__definition__list__item","Получение практических навыков применения технологии маркетинга")
+                    a(href="detail.html").detail__btn Подробнее
+                        span.detail__btn__span
+                            +image("arrow2","detail__btn__span__img")
+        include ../libs/detailHelpers/_detail-helper
+        include ../libs/detailHelpers/detail-finish
+        include ../libs/serviseHelpers/_validation
+        include ../libs/_regsitration
+        include ../includes/modules/_footer
+    block script

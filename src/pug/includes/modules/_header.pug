@@ -16,10 +16,10 @@ header#header
                 a(href='/' ).header__nav__logo
                     +image("logo", "header__nav__logo__items")
                 ul.header__nav__list
-                    +list('/','консультации')
-                    +list('services.html','Услуги')
-                    +list('training.html','Треннинги')
-                    +list('/https://example.com', 'Блог',"_blank")
+                    +list('/','консультации','',"consult")
+                    +list('services.html','Услуги','',"service")
+                    +list('training.html','Треннинги','',"training")
+                    +list('/https://example.com', 'Блог',"_blank","blog")
                 .header__nav__contact
                     ul.header__nav__contact__list
                         li.header__nav__contact__list__items

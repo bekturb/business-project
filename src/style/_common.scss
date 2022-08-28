@@ -1,10 +1,15 @@
 
-$font-stack: "Lato";
+$font-stack: "Lato", sans-serif;
 $font-main: 'Montserrat';
 $font-second: 'Roboto';
 $title-color: #282C37;
 $title-second: #9FA7B0;
 $button-title: #FFFFFF;
+
+
+body{
+  font-family: $font-stack;
+}
 
 .container{
   width: 1172px;

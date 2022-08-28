@@ -6,6 +6,7 @@ const links = document.querySelectorAll('.header__nav__list__items__navlink')
 
 links.forEach(li => {
     li.addEventListener('click', () => {
+        console.log(li.classList.value)
         resetLinks();
         li.classList.add("active")
     })
