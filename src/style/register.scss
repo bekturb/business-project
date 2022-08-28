@@ -1,0 +1,177 @@
+
+
+@mixin placeholder{
+  font-family: $font-stack;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+  color: #9FA7B0;
+}
+
+@mixin error{
+  margin-right: 160px;
+  font-family: $font-stack;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+
+  color: #CF4747;
+}
+@mixin error-input {
+  background: #FFFFFF;
+  border: 1px solid #CF4747;
+  border-radius: 8px;
+
+}
+
+#register{
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.34);
+  width: 100vw;
+  height: 100vh;
+  display: none;
+  .register {
+    margin-top: 40px;
+    &__card {
+
+      padding-bottom: 30px;
+      background: #FFFFFF;
+      margin: 0 auto;
+      width: 375px;
+      max-height: 610px;
+      overflow: auto;
+      text-align:justify;
+      &::-webkit-scrollbar{
+
+      }
+      &__close{
+        margin-left: 22px;
+        margin-top: 20px;
+      }
+      &__title {
+        margin-top: 116px;
+        text-align: center;
+        font-family: $font-stack;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 22px;
+        line-height: 26px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+
+        color: $title-color;
+      }
+
+      &__form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        &__name {
+          margin-top: 35px;
+          width: 292px;
+          height: 50px;
+          background: #FFFFFF;
+          border: 1px solid #282C37;
+          border-radius: 8px;
+          @include input-font;
+          &::placeholder{
+            @include placeholder
+          }
+        }
+        &__error--name{
+          display: none;
+         @include error
+        }
+
+        &__email {
+          margin-top: 21px;
+          width: 292px;
+          height: 50px;
+          background: #FFFFFF;
+          border: 1px solid #282C37;
+          border-radius: 8px;
+          @include input-font;
+          &::placeholder{
+            @include placeholder
+          }
+        }
+        &__error--email{
+          display: none;
+          @include error
+        }
+
+        &__problem {
+          margin-top: 24px;
+          width: 292px;
+          height: 191px;
+
+          background: #FFFFFF;
+          border: 1px solid #282C37;
+          border-radius: 8px;
+          @include input-font;
+          &::placeholder{
+            padding-top: 12px;
+            @include placeholder
+          }
+        }
+        &__error--problem{
+          display: none;
+          @include error
+        }
+        &__btn {
+          margin-top: 21px;
+          width: 292px;
+          height: 48px;
+          background: #47CF34;
+          border-radius: 9px;
+          font-family: $font-main;
+          border: none;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+          text-align: center;
+          text-transform: uppercase;
+
+          color: #FFFFFF;
+
+        }
+        .register__card__form__btn.active{
+          background: #9FA7B0;
+          border-radius: 8px;
+        }
+        .register__card__form__problem.active{
+          @include error-input
+        }
+
+        .register__card__form__email.active{
+          @include error-input
+        }
+
+        .register__card__form__name.active{
+          @include error-input
+        }
+      }
+      &__success{
+        display: none;
+        width: 200px;
+        margin: 29px auto;
+        font-family: $font-stack;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 22px;
+        text-align: center;
+
+        color: #30B01E;
+      }
+    }
+  }
+}

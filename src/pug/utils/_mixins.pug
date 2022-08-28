@@ -1,0 +1,17 @@
+mixin image(name, className)
+    img(class=className)(src=require(`../../img/${name}.svg`) alt='').
+
+mixin list(link, name, blank)
+    li.header__nav__list__items
+        a(href=link target=blank).header__nav__list__items__navlink=name
+
+
+mixin order(orderName,link, name)
+    li(class=orderName)
+        a(href=link)(class=orderName + "__item")=name
+
+
+mixin wihtoutlink(img,orderName, name)
+    li(class=orderName)
+        img(src=require(`../../img/${img}.svg`) alt='')(class=orderName + "__img")
+        p(class=orderName + "__subtitle")=name

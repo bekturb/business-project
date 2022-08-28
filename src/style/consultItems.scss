@@ -1,0 +1,121 @@
+@mixin title-mix{
+    font-family: $font-stack;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    letter-spacing: 0.01em;
+
+    color: #FFFFFF;
+}
+
+@mixin hover-effect{
+  background: #5391DC;
+  border-radius: 20px;
+}
+
+#consult-items{
+  padding-bottom: 101px;
+  padding-top: 130px;
+  .consult-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__marketing{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 381px;
+      height: 507px;
+
+      background: #6CA7EF;
+      border-radius: 20px;
+      transition: .2s;
+
+      &:hover{
+        @include hover-effect
+      }
+      &__title{
+        width: 270px;
+        @include title-mix
+      }
+      &__img{
+          margin-bottom: 28px;
+      }
+    }
+    &__cards{
+      &__effect{
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 777px;
+        height: 164px;
+
+        background: #6CA7EF;
+        border-radius: 20px;
+        transition: .2s;
+        &:hover{
+          @include hover-effect
+        }
+        &__title{
+          width: 495px;
+          @include title-mix
+        }
+      }
+      &__powers{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &__knowledge{
+          margin-right: 13px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 381px;
+          height: 328px;
+
+          background: #6CA7EF;
+          border-radius: 20px;
+          transition: .2s;
+          &:hover{
+            @include hover-effect
+          }
+          &__title{
+            width: 213px;
+            @include title-mix
+          }
+
+          &__img{
+              margin-bottom: 25px;
+          }
+        }
+        &__startup{
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          width: 381px;
+          height: 328px;
+
+          background: #6CA7EF;
+          border-radius: 20px;
+          transition: .2s;
+          &:hover{
+            @include hover-effect
+          }
+          &__title{
+            width: 242px;
+            @include title-mix
+          }
+          &__img{
+            margin-bottom: 43px;
+          }
+        }
+      }
+    }
+  }
+}

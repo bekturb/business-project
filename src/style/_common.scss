@@ -1,0 +1,22 @@
+
+$font-stack: "Lato";
+$font-main: 'Montserrat';
+$font-second: 'Roboto';
+$title-color: #282C37;
+$title-second: #9FA7B0;
+$button-title: #FFFFFF;
+
+.container{
+  width: 1172px;
+  margin: 0 auto;
+}
+
+.row{
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.col-2{
+  width: 50%;
+}

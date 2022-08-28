@@ -1,0 +1,15 @@
+extends ../layouts/index
+include  ../utils/_mixins
+
+block variables
+    - var title = 'Webpack + Pug';
+    - var description = 'Description for Webpack + Pug';
+block content
+    section#training
+        .container
+            .training
+                include ../libs/trainingHelpers/training-head
+                include ../libs/trainingHelpers/training-helpers
+                include ../libs/trainingHelpers/training-block
+                include ../libs/trainingHelpers/training-finish
+                include ../libs/_regsitration

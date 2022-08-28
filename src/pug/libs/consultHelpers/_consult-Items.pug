@@ -1,0 +1,20 @@
+include ../../utils/_mixins
+include ../../utils/_text
+
+section#consult-items
+    .container
+        .consult-items
+            a(href="/").consult-items__marketing
+                +image("report ","consult-items__marketing__img")
+                h1.consult-items__marketing__title Разрабатываем маркетинг-план: дорожная карта достижения целей
+            .consult-items__cards
+                a(href="/").consult-items__cards__effect
+                    +image("lamp","consult-items__cards__effect__img")
+                    h1.consult-items__cards__effect__title Повышаем эффективность продвижения: аудит существующей модели
+                .consult-items__cards__powers
+                    a(href="/").consult-items__cards__powers__knowledge
+                        +image("knowledge","consult-items__cards__powers__knowledge__img")
+                        h1.consult-items__cards__powers__knowledge__title Находим скрытую прибыль: анализ модели ценообразования
+                    a(href="services.html").consult-items__cards__powers__startup
+                        +image("raceta","consult-items__cards__powers__startup__img")
+                        h1.consult-items__cards__powers__startup__title Запускаем новый проект: start-up маркетинг

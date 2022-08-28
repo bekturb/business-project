@@ -1,0 +1,131 @@
+@mixin input-font{
+  padding-left: 20px;
+  font-family: $font-stack;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+
+
+  color: #282C37;
+}
+
+#validation{
+  position: relative;
+  padding-bottom: 91px;
+
+  &::before{
+    position: absolute;
+    width: 139px;
+    height: 139px;
+    bottom: 162px;
+    left: 182px;
+    content: '';
+    background: url("data:image/svg+xml,%3Csvg width='121' height='137' viewBox='0 0 121 137' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M56.5 1.3094C58.9752 -0.11966 62.0248 -0.119661 64.5 1.3094L116.689 31.4406C119.164 32.8697 120.689 35.5107 120.689 38.3688V98.6312C120.689 101.489 119.164 104.13 116.689 105.559L64.5 135.691C62.0248 137.12 58.9752 137.12 56.5 135.691L4.31124 105.559C1.83603 104.13 0.311234 101.489 0.311234 98.6312V38.3688C0.311234 35.5107 1.83603 32.8697 4.31123 31.4406L56.5 1.3094Z' fill='%23EBF2FC'/%3E%3C/svg%3E%0A") no-repeat;
+    z-index: -1;
+  }
+  .validation{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+      position: absolute;
+      top: 45px;
+      left: 157px;
+      width: 203px;
+      height: 203px;
+      content: '';
+      background: url("data:image/svg+xml,%3Csvg width='177' height='201' viewBox='0 0 177 201' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M84.5 1.3094C86.9752 -0.11966 90.0248 -0.119661 92.5 1.3094L172.402 47.4406C174.877 48.8697 176.402 51.5107 176.402 54.3688V146.631C176.402 149.489 174.877 152.13 172.402 153.559L92.5 199.691C90.0248 201.12 86.9752 201.12 84.5 199.691L4.59842 153.559C2.12321 152.13 0.598419 149.489 0.598419 146.631V54.3688C0.598419 51.5107 2.12321 48.8697 4.59842 47.4406L84.5 1.3094Z' fill='%23EBF2FC'/%3E%3C/svg%3E%0A") no-repeat;
+      z-index: -1;
+    }
+
+    &::after{
+      position: absolute;
+      bottom: -40px;
+      right: 41px;
+      width: 257px;
+      height: 257px;
+      content: '';
+      background: url("data:image/svg+xml,%3Csvg width='223' height='255' viewBox='0 0 223 255' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M107.5 1.3094C109.975 -0.119661 113.025 -0.119661 115.5 1.3094L218.784 60.9406C221.259 62.3697 222.784 65.0107 222.784 67.8688V187.131C222.784 189.989 221.259 192.63 218.784 194.059L115.5 253.691C113.025 255.12 109.975 255.12 107.5 253.691L4.21574 194.059C1.74053 192.63 0.215736 189.989 0.215736 187.131V67.8688C0.215736 65.0107 1.74053 62.3697 4.21574 60.9406L107.5 1.3094Z' fill='%23EBF2FC'/%3E%3C/svg%3E%0A") no-repeat;
+      z-index: -1;
+    }
+    &__card{
+      margin-top: 117px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 643px;
+      height: 349px;
+      filter: drop-shadow(4px 4px 20px rgba(40, 44, 55, 0.2));
+      background: #FFFFFF;
+      border-radius: 20px;
+      &__form{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        &__name{
+          margin-bottom: 24px;
+          width: 530px;
+          height: 50px;
+
+          background: #FFFFFF;
+          border: 1px solid #9FA7B0;
+          border-radius: 8px;
+          @include input-font;
+          &::placeholder{
+            font-family: $font-stack;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+            /* identical to box height */
+
+
+            color: #9FA7B0;
+          }
+        }
+        &__email{
+          margin-bottom: 21px;
+          width: 530px;
+          height: 50px;
+
+          background: #FFFFFF;
+          border: 1px solid #9FA7B0;
+          border-radius: 8px;
+          @include input-font;
+          &::placeholder{
+            font-family: $font-stack;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 22px;
+
+            color: #9FA7B0;
+          }
+        }
+        &__btn{
+          padding: 14px 140px;
+          background: #47CF34;
+          border-radius: 8px;
+          font-family: $font-main;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 20px;
+
+          text-align: center;
+          text-transform: uppercase;
+          border: none;
+          color: #FFFFFF;
+          transition: .2s;
+          &:hover{
+            background: #30B01E;
+            border-radius: 8px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+
+#consult-services{
+  padding-top: 127px;
+  height: 500px;
+  .consult-services{
+    position: relative;
+    &__card{
+      height: 65px;
+      width: 381px;
+      margin-top: 56px;
+      margin-left: auto;
+      margin-right: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      justify-items: flex-start;
+      &__image{
+        width: 35px;
+        height: 38px;
+      }
+      &__title{
+        width: 282px;
+        font-family: $font-stack;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+
+        color: $title-color;
+        transition: .2s;
+        &:hover{
+          text-decoration-line: underline;
+          color: #5391DC;
+        }
+      }
+    }
+    &__blog__title{
+      position: relative;
+      margin-top: 142px;
+      margin-left: 58px;
+      font-family: $font-main;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 37px;
+      text-transform: uppercase;
+      color: $title-color;
+      &::before{
+        position: absolute;
+        top: -38px;
+        left: -52px;
+        content: '';
+        width: 111px;
+        height: 111px;
+        background: url("data:image/svg+xml,%3Csvg width='97' height='109' viewBox='0 0 97 109' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M44.5 1.3094C46.9752 -0.119662 50.0248 -0.119661 52.5 1.3094L92.5644 24.4406C95.0396 25.8697 96.5644 28.5107 96.5644 31.3688V77.6312C96.5644 80.4893 95.0396 83.1303 92.5644 84.5594L52.5 107.691C50.0248 109.12 46.9752 109.12 44.5 107.691L4.43559 84.5594C1.96038 83.1303 0.435589 80.4893 0.435589 77.6312V31.3688C0.435589 28.5107 1.96038 25.8697 4.43559 24.4406L44.5 1.3094Z' fill='%23EBF2FC'/%3E%3C/svg%3E") no-repeat;
+        z-index: -2;
+      }
+    }
+    &::after{
+      position: absolute;
+      top: 257px;
+      left: 100px;
+      content: '';
+      width: 735.5px;
+      height: 170.5px;
+      background:url("data:image/svg+xml,%3Csvg width='735' height='170' viewBox='0 0 735 170' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M732.5 0.5V27.5C732.5 44.0685 719.069 57.5 702.5 57.5H285C268.431 57.5 255 70.9315 255 87.5V138C255 154.569 241.569 168 225 168H0' stroke='%23EBF2FC' stroke-width='4'/%3E%3C/svg%3E%0A") no-repeat;
+    }
+  }
+}

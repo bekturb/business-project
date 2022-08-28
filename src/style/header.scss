@@ -1,0 +1,105 @@
+
+#header {
+  padding: 20px 0;
+  background: #FFFFFF;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+
+    &__logo {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+
+      &__items {
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        &__img {
+          width: 27px;
+          height: 29px;
+
+        }
+
+        &__title {
+          margin-left: 13px;
+          font-family: $font-stack;
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 14px;
+          letter-spacing: 0.03em;
+          text-transform: uppercase;
+          color: $title-color;
+        }
+      }
+    }
+
+    &__nav {
+      margin-top: 7px;
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      &__close{
+        display: none;
+      }
+      &__logo{
+        display: none;
+      }
+      &__list {
+        margin-right: 13px;
+        display: flex;
+        justify-content: space-between;
+        align-content: center;
+
+        &__items {
+          margin-right: 84px;
+
+          &__navlink {
+            font-family: $font-stack;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.03em;
+            text-transform: uppercase;
+
+            color: $title-color;
+
+          }
+
+          & .active {
+            font-weight: 700;
+            color: #282C37;
+          }
+        }
+      }
+
+      &__contact {
+        &__list {
+          margin-right: -24px;
+          display: flex;
+          justify-content: space-between;
+          align-content: center;
+
+          &__items {
+            margin-right: 23px;
+            transition: .2s ease-in;
+            & :hover{
+              .header__nav__contact__list__items__link__icon{
+                fill: #47CF34;
+              }
+            }
+          }
+        }
+      }
+    }
+    &__burger{
+      display: none;
+    }
+  }
+}

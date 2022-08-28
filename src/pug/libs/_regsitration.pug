@@ -1,0 +1,16 @@
+
+section#register
+    .container
+        .register
+            .register__card
+                +image("close","register__card__close")
+                h2.register__card__title Оставьте заявку
+                form.register__card__form
+                    input.register__card__form__name(placeholder='Ваше имя')
+                    span.register__card__form__error--name поле обязательно*
+                    input.register__card__form__email(placeholder='Email')
+                    span.register__card__form__error--email поле обязательно*
+                    textarea.register__card__form__problem(placeholder='Пожалуйста опишите вашу проблему')
+                    span.register__card__form__error--problem поле обязательно*
+                    button.register__card__form__btn Отправить
+                h3.register__card__success Ваша заявка успешно отправлена!
