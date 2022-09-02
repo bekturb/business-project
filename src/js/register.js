@@ -31,12 +31,14 @@ const btn = document.querySelector('.register__card__form__btn')
 const success = document.querySelector('.register__card__success')
 
 
-let validate = true
+let validateName = false
+let validateEmail = false
+let validateProblem = false
 
 form.addEventListener("submit", (e) =>{
     e.preventDefault()
     checkInput()
-    if(validate === true){
+    if(validateName && validateEmail && validateProblem){
         btn.classList.add('active')
         btn.disabled = true
         btn.innerHTML = "идет отправка..."
@@ -55,34 +57,35 @@ function checkInput(){
     const nameValue = name.value.trim()
     const emailValue = email.value.trim()
     const problemValue = problem.value.trim()
+    const pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
 
 
     if (nameValue === ''){
-        validate = false
+        validateName = false
         nameError.style.display = 'block'
         name.classList.add('active')
     }else{
-        validate = true
+        validateName = true
         nameError.style.display = 'none'
         name.classList.remove('active')
     }
 
-    if (emailValue === ''){
-        validate = false
-        emailError.style.display = 'block'
-        email.classList.add('active')
-    }else{
-        validate = true
+    if (emailValue.match(pattern) && emailValue !== ''){
+        validateEmail = true
         emailError.style.display = 'none'
         email.classList.remove('active')
+    }else{
+        validateEmail = false
+        emailError.style.display = 'block'
+        email.classList.add('active')
     }
 
     if (problemValue === ''){
-        validate = false
+        validateProblem = false
         problemError.style.display = 'block'
         problem.classList.add('active')
     }else{
-        validate = true
+        validateProblem = true
         problemError.style.display = 'none'
         problem.classList.remove('active')
     }

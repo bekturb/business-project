@@ -1,14 +1,13 @@
 
-$font-stack: "Lato", sans-serif;
 $font-main: 'Montserrat';
 $font-second: 'Roboto';
+$font-stack: "Lato",sans-serif;
 $title-color: #282C37;
 $title-second: #9FA7B0;
 $button-title: #FFFFFF;
 
-
 body{
-  font-family: $font-stack;
+  scroll-behavior: smooth;
 }
 
 .container{
